@@ -8,66 +8,110 @@
 	android:background="#FFFFFF"
 	tools:context=".LoginActivity">
 
-
-	<ImageView
-		android:id="@+id/calendar"
-		android:layout_width="289dp"
-		android:layout_height="283dp"
-		android:layout_marginTop="30dp"
-		android:src="@drawable/ic_launcher"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintTop_toTopOf="parent"/>
-
-
 	<TextView
-		android:id="@+id/welcome_text"
+		android:id="@+id/welcome_back"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:textSize="24sp"
-		android:textColor="#313131"
-		android:text="Hello Norton App"
-		app:layout_constraintTop_toBottomOf="@id/calendar"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginLeft="24dp"
 		android:fontFamily="@font/montserrat_semi_bold"
-		/>
-	<TextView
-		android:id="@+id/sub_welcome"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:text="Welcome Back"
 		android:textColor="#313131"
-		android:text="What is going to happen tomorrow ?"
-		app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+		android:textSize="32sp"
 		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintRight_toRightOf="parent"
-		android:fontFamily="@font/montserrat_light"
+		app:layout_constraintTop_toTopOf="parent"
+		android:layout_marginTop="90dp"
 		/>
 
-	<ImageView
-		android:id="@+id/background_satu"
+	<TextView
+		android:id="@+id/sign_in"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="24dp"
+		android:layout_marginTop="8dp"
+		android:fontFamily="@font/montserrat_light"
+		android:text="@string/sign_in_to_continue"
+		android:textColor="#9b9b9b"
+		android:textSize="16sp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/welcome_back" />
+
+	<TextView
+		android:id="@+id/reset_code"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="20dp"
+		android:layout_marginTop="48dp"
+		android:text="Username"
+		android:textColor="#313131"
+		android:textSize="20sp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/sign_in" />
+
+	<EditText
+		android:id="@+id/edt_reset_code"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:scaleType="fitXY"
-		android:src="@drawable/ic_launcher_foreground"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent" />
-
-	<TextView
-		android:id="@+id/login_text"
-		app:layout_constraintBottom_toBottomOf="parent"
+		android:layout_marginLeft="24dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="24dp"
+		android:hint="Enter Your Email"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
-		android:layout_marginBottom="72dp"
-		android:textColor="#FFFFFF"
+		app:layout_constraintTop_toBottomOf="@id/reset_code"
+		/>
+
+	<TextView
+		android:id="@+id/new_password"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Login"
+		android:layout_marginLeft="20dp"
+		android:layout_marginTop="8dp"
+		android:text="Password"
+		android:textColor="#313131"
+		android:textSize="20sp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/edt_reset_code" />
+
+	<EditText
+		android:id="@+id/edt_new_password"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="24dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="24dp"
+		android:hint="@string/enter_your_password"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/new_password" />
+
+	<TextView
+		android:id="@+id/forgot_password"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="24dp"
+		android:text="@string/forgot_password"
+		android:textColor="#313131"
 		android:textSize="18sp"
-		android:fontFamily="@font/montserrat_light"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/edt_new_password"
 		/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="24dp"
+		android:layout_marginEnd="24dp"
+		android:textSize="18sp"
+		android:layout_marginBottom="200dp"
+		android:background="@drawable/button_red"
+		android:text="LOG IN"
+		android:textColor="#FFFFFF"
+		app:layout_constraintTop_toBottomOf="@id/forgot_password"
+		android:layout_marginTop="80dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
